@@ -1,0 +1,7 @@
+{
+  "name": "CalendarioApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
