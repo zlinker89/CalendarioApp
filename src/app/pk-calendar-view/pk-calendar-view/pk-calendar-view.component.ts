@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-explore-container',
-  templateUrl: './explore-container.component.html',
-  styleUrls: ['./explore-container.component.scss'],
+  selector: 'app-pk-calendar-view',
+  templateUrl: './pk-calendar-view.component.html',
+  styleUrls: ['./pk-calendar-view.component.scss'],
 })
-export class ExploreContainerComponent implements OnInit {
+export class PkCalendarViewComponent implements OnInit {
   date: any;
   daysInThisMonth: any;
   daysInLastMonth: any;
@@ -76,5 +76,4 @@ export class ExploreContainerComponent implements OnInit {
     this.date = new Date(this.date.getFullYear(), this.date.getMonth()+2, 0);
     this.getDaysOfMonth();
   }
-
 }
