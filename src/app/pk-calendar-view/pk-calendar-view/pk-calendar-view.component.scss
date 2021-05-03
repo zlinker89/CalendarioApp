@@ -1,77 +1,96 @@
 .pk-card {
-    margin-inline: 7vw;
+  margin-inline: 7vw;
+  box-shadow: 0px 0px 45px #acabaf;
+}
+.bg-btn{
+  --background: #67baff !important;
+}
+
+
+.col-1 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 8.33333%;
+  -ms-flex: 0 0 8.33333%;
+  flex: 0 0 14.285714285714286%;
+  width: 14.285714285714286%;
+  max-width: 14.285714285714286%;
+}
+
+.col {
+  text-align: center;
+  padding: 5px;
+}
+
+.last-month,
+.next-month {
+  color: #999999;
+  font-size: 90%;
+}
+
+.currentDate,
+.otherDate {
+  padding: 5px 9px 5px 9px;
+}
+
+.currentDate {
+  font-weight: bold;
+  background-color: #376cc2;
+  color: white;
+  border-radius: 30px;
+}
+
+.pk-calendar-header {
+  .pk-calendar-text {
+
+    h6,
+    h1 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+
+    h6 {
+      transform: translateY(7px);
+    }
   }
-  .col-1 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 8.33333%;
-    -ms-flex: 0 0 8.33333%;
-    flex: 0 0 14.285714285714286%;
-    width: 14.285714285714286%;
-    max-width: 14.285714285714286%;
+
+  .pk-calendar-icon {
+    transform: translateY(25px);
   }
-  .col {
+}
+
+.selected-date {
+  width: 20px;
+  height: 2px;
+  background-color: blue;
+}
+
+.unselected-date {
+  border: none;
+}
+
+.pk-calendar-body {
+  .grid {
+    padding: 0;
+  }
+
+  .col:last-child {
+    border-right: none;
+  }
+
+  .pk-calendar-weekday,
+  .pk-calendar-date {
     text-align: center;
-    padding: 5px;
+    margin: 0;
+    font-size: 13px;
   }
-  .last-month,
-  .next-month {
-    color: #999999;
-    font-size: 90%;
+}
+
+@media screen and (min-width: 280px) and (max-width: 359px) {
+  .pk-card {
+    margin-inline: 0vw;
   }
-  .currentDate,
-  .otherDate {
-    padding: 5px;
-  }
-  .currentDate {
-    font-weight: bold;
-    background-color: blue;
-    color: white;
-    border-radius: 30px;
-  }
-  .pk-calendar-header {
-    .pk-calendar-text{
-      h6, h1 {
-        margin-top: 0px;
-        margin-bottom: 0px;
-      }
-      h1{
-        font-size: 35px;
-      }
-      h6{
-        transform: translateY(7px);
-      }
-    }
-    .pk-calendar-icon{
-      transform: translateY(25px);
-    }
-  }
-  .selected-date {
-    width: 20px;
-    height: 2px;
-    background-color: blue;
-  }
-  .unselected-date {
-    border: none;
-  }
-  
-  .pk-calendar-body {
-    .grid {
-      padding: 0;
-    }
-    .col:last-child {
-      border-right: none;
-    }
-    .pk-calendar-weekday,
-    .pk-calendar-date {
-      text-align: center;
-      margin: 0;
-      font-size: 13px;
-    }
-  }
-  
-  @media screen and (min-width: 280px) and (max-width: 359px) {
-    .pk-card {
-      margin-inline: 0vw;
-    }
-  }
-  
+}

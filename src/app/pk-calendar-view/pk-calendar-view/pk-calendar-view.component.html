@@ -24,7 +24,7 @@
         <ion-row class="pk-calendar-date">
           <ion-col *ngFor="let lastDay of daysInLastMonth" class="last-month col-1">{{lastDay}}</ion-col>
           <ion-col *ngFor="let day of daysInThisMonth" class="col-1">
-            <span class="currentDate" *ngIf="currentDate === day; else otherDate">{{day}}</span>
+            <span class="currentDate" *ngIf="currentDay === day; else otherDate">{{day}}</span>
             <ng-template #otherDate class="otherDate">{{day}}</ng-template>
           </ion-col>
           <ion-col *ngFor="let nextDay of daysInNextMonth" class="next-month col-1">{{nextDay}}</ion-col>
@@ -33,3 +33,59 @@
     </div>
   </ion-card-content>
 </ion-card>
+
+<ion-card class="pk-card">
+  <ion-card-content>
+    <div class="pk-calendar-header">
+      <ion-row class="pk-calendar-month">
+        <ion-col size="10" class="pk-calendar-text">
+          <h6>Starting at</h6>
+          <h1>{{startingAt}}</h1>
+        </ion-col>
+        <ion-col>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" (click)="setTime('startingAt', 15)">
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="12" (click)="setTime('startingAt', -15)">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<ion-card class="pk-card">
+  <ion-card-content>
+    <div class="pk-calendar-header">
+      <ion-row class="pk-calendar-month">
+        <ion-col size="10" class="pk-calendar-text">
+          <h6>Ending at</h6>
+          <h1>{{endingAt}}</h1>
+        </ion-col>
+        <ion-col>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" (click)="setTime('endingAt', 15)">
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </ion-col>
+              <ion-col size="12" (click)="setTime('endingAt', -15)">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<div style="width: 240px; margin: 0 auto; margin-top: 20px;">
+  <ion-button expand="block" class="bg-btn">
+    CHECK AVAILABILITY
+  </ion-button>
+</div>
